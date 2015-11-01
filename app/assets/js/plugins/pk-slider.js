@@ -20,8 +20,15 @@
     ;(function($, window, undefined) {
       'use strict';
 
-      var pluginName = 'pkpopup';
-      
+      var pluginName = 'pkslider';
+      // var ui = {
+      //   nextSlide: '<button type="button" class="btn btn-default next-slide"></button>',
+      //   prevSlide: '<<button type="button" class="btn btn-default prev-slide"></button>',
+      //   navBar: '<div class="pkslider-nav"></div>',
+            
+      //   slide: '<div class="slide"></div>'
+
+      // };
 
       function Plugin(element, options) {
         this.element = $(element);
@@ -32,7 +39,10 @@
       Plugin.prototype = {
         init: function() {
           // initialize
-          var that = this;
+          // var that = this;
+          this.vars = {
+
+          };
         },
         bindCustomEvent: function() {
           $.isFunction(this.options.onCallback) && this.options.onCallback();
@@ -63,6 +73,8 @@
                   '<div class="content-pkslider"></div>' +
                   '</div>',
         onCallback: null,
+        drap: false,
+        carousel: false
       };
 
       $(function() {
